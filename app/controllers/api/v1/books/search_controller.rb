@@ -5,8 +5,9 @@ class Api::V1::Books::SearchController < ApplicationController
     forecast = OpenWeatherFacade.get_forecast(coordinates)
 
     books = BookSearchFacade.search_books(params['location'])
+    quantity = params['quantity'].to_i
 
-    render json: BookSerializer.index(params['location'], forecast, books[0], books[1])
+    render json: BookSerializer.index(params['location'], forecast, books[0].first(quantity), books[1])
   end
 
 end
