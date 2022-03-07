@@ -10,4 +10,5 @@ RSpec.describe BookSearchFacade do
       expect(books[1]).to be_a(Integer)
     end
   end
+
 end
