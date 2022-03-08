@@ -17,4 +17,14 @@ RSpec.describe 'Search Images' do
     expect(image[:data][:attributes][:url]).to be_a(String)
   end
 
+  it 'returns an error if location param is missing', :vcr do
+    get '/api/v1/backgrounds'
+
+    expect(response).to_not be_successful
+
+    background = JSON.parse(response.body, symbolize_names: true)
+
+    expect(background[:errors]).to be_a(Array)
+  end
+
 end
