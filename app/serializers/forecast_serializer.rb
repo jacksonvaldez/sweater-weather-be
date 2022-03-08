@@ -1,7 +1,6 @@
 class ForecastSerializer
 
   def self.all_forecasts(current_weather, daily_forecasts, hourly_forecasts)
-    binding.pry
     {
       data: {
         id: nil,
