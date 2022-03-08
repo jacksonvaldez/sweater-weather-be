@@ -48,6 +48,7 @@ end
 group :test do
   gem 'webmock'
   gem 'simplecov'
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 
