@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Tue, 08 Mar 2022 21:32:15 GMT
+      - Tue, 08 Mar 2022 21:32:04 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -96,5 +96,5 @@ http_interactions:
         sky","icon":"01d"}],"clouds":4,"pop":0,"uvi":9.19},{"dt":1647252000,"sunrise":1647233373,"sunset":1647276547,"moonrise":1647264540,"moonset":1647224280,"moon_phase":0.37,"temp":{"day":295.19,"min":287.66,"max":299.96,"night":291.44,"eve":299.96,"morn":287.72},"feels_like":{"day":293.82,"night":289.74,"eve":298.87,"morn":285.78},"pressure":1020,"humidity":14,"dew_point":266.1,"wind_speed":8.86,"wind_deg":35,"wind_gust":14.5,"weather":[{"id":801,"main":"Clouds","description":"few
         clouds","icon":"02d"}],"clouds":12,"pop":0,"uvi":10},{"dt":1647338400,"sunrise":1647319721,"sunset":1647362964,"moonrise":1647354300,"moonset":1647313260,"moon_phase":0.4,"temp":{"day":292.65,"min":285.26,"max":298.19,"night":288.85,"eve":298.19,"morn":285.26},"feels_like":{"day":291.05,"night":286.84,"eve":296.98,"morn":283.13},"pressure":1023,"humidity":15,"dew_point":265.29,"wind_speed":9,"wind_deg":35,"wind_gust":14.12,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"clouds":50,"pop":0,"uvi":10}]}'
-  recorded_at: Tue, 08 Mar 2022 21:32:15 GMT
+  recorded_at: Tue, 08 Mar 2022 21:32:04 GMT
 recorded_with: VCR 6.0.0
