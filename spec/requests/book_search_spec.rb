@@ -8,6 +8,8 @@ RSpec.describe 'Book Search Endpoint' do
     books = JSON.parse(response.body, symbolize_names: true)
 
     # binding.pry
+    expect(response).to be_successful
+    
     expect(books).to be_a(Hash)
     expect(books[:data]).to be_a(Hash)
     expect(books[:data][:attributes]).to be_a(Hash)
