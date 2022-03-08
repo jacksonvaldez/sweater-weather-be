@@ -9,7 +9,7 @@ class Api::V1::Forecast::SearchController < ApplicationController
       # binding.pry
       render json: ForecastSerializer.all_forecasts(current_weather, daily_forecasts, hourly_forecasts)
     else
-      render json: ErrorSerializer.return_error(["location param is missing"]), status: 404
+      render json: ErrorSerializer.return_errors(["location param is missing"]), status: 404
     end
   end
 
