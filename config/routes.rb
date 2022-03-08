@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
       get 'book-search', to: 'books/search#index'
       get 'forecast', to: 'forecast/search#index'
+      get 'backgrounds', to: 'background/search#index'
     end
   end
 end
