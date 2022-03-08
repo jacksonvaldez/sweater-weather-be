@@ -6,7 +6,7 @@ RSpec.describe UserSerializer do
     it 'returns the correct hash' do
       api_key = SecureRandom.hex
       user = User.new(email: "something@website.com", password: 'password123', password_confirmation: 'password123')
-      user.api_key_digest = Digest::SHA256.hexdigest api_key
+      user.api_key = api_key
       user.save!
 
       expected = {
@@ -19,8 +19,8 @@ RSpec.describe UserSerializer do
           }
         }
       }
-      
-      expect(UserSerializer.user_created(user, api_key)).to eq(expected)
+
+      expect(UserSerializer.user_created(user, user.api_key)).to eq(expected)
     end
   end
 

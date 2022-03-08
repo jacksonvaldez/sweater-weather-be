@@ -5,5 +5,5 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true
   validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
-  validates :api_key_digest, presence: true
+  validates :api_key, presence: true
 end
