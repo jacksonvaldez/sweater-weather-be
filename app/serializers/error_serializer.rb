@@ -1,6 +1,6 @@
 class ErrorSerializer
 
-  def self.return_error(errors)
+  def self.return_errors(errors)
     {
       errors: errors
     }
