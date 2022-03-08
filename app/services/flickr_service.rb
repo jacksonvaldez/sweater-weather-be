@@ -15,8 +15,7 @@ class FlickrService
     response = conn.get('services/rest') do |req|
       req.params['method'] = 'flickr.photos.search'
       req.params['text'] = query
-      # req.params['content_type'] = 1
-      req.params['geo_context'] = 2
+      req.params['geo_context'] = 2 # Only Include Photos Taken Outside
     end
     JSON.parse(response.body, symbolize_names: true)
   end
