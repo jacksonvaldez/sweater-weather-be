@@ -1,6 +1,6 @@
 class UserSerializer
 
-  def self.user_created(user, api_key)
+  def self.show(user, api_key)
     {
       data: {
         type: 'users',
