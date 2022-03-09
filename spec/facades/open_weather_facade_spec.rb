@@ -28,4 +28,10 @@ RSpec.describe OpenWeatherFacade do
     end
   end
 
+  describe 'self.get_forecast_by_time' do
+    it 'retursn an HourlyForecast poro for a certain time', :vcr do
+      expect(OpenWeatherFacade.get_forecast_by_time({lat: 80, lng: -40}, 5000)).to be_a(HourlyForecast)
+    end
+  end
+
 end

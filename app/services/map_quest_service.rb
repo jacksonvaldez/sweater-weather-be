@@ -13,4 +13,14 @@ class MapQuestService
     end
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.get_optimized_route(locations)
+    json = { locations: locations }.to_json
+
+    response = conn.get('directions/v2/optimizedroute') do |req|
+      req.params['json'] = json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
 end

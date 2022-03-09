@@ -26,4 +26,11 @@ class OpenWeatherFacade
     end
   end
 
+  def self.get_forecast_by_time(coordinates, time_offset) # time_offset in seconds
+    hourly_forecasts = get_hourly_forecasts(coordinates)
+
+    index = (time_offset / 60) % 48
+    hourly_forecasts[index]
+  end
+
 end

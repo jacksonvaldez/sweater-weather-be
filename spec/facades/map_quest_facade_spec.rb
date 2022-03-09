@@ -11,4 +11,18 @@ RSpec.describe MapQuestFacade do
     end
   end
 
+  describe 'self.get_travel_time' do
+    it 'returns travel time between locations', :vcr do
+      travel_time = MapQuestFacade.get_travel_time(['denver,co', 'pueblo,co'])
+
+      expect(travel_time).to be_a(Integer)
+    end
+
+    it 'returns nil if locations are invalid', :vcr do
+      travel_time = MapQuestFacade.get_travel_time(['Earth', 'Mars'])
+
+      expect(travel_time).to eq(nil)
+    end
+  end
+
 end
