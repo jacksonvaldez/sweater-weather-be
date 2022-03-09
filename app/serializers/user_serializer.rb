@@ -1,13 +1,13 @@
 class UserSerializer
 
-  def self.show(user, api_key)
+  def self.show(user)
     {
       data: {
         type: 'users',
         id: user.id,
         attributes: {
           email: user.email,
-          api_key: api_key
+          api_key: user.api_key
         }
       }
     }

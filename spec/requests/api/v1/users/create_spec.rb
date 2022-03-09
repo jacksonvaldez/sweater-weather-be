@@ -29,7 +29,7 @@ RSpec.describe 'Create User' do
     user = JSON.parse(response.body, symbolize_names: true)
 
     expect(user.keys).to eq([:errors])
-    expect(user[:errors]).to be_a(Hash)
+    expect(user[:errors]).to be_a(Array)
   end
 
   it 'doesnt create user if password and password_confirmation dont match', :vcr do
@@ -40,7 +40,7 @@ RSpec.describe 'Create User' do
     user = JSON.parse(response.body, symbolize_names: true)
 
     expect(user.keys).to eq([:errors])
-    expect(user[:errors]).to be_a(Hash)
+    expect(user[:errors]).to be_a(Array)
   end
 
 end

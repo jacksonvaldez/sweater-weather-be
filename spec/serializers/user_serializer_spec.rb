@@ -20,7 +20,7 @@ RSpec.describe UserSerializer do
         }
       }
 
-      expect(UserSerializer.show(user, user.api_key)).to eq(expected)
+      expect(UserSerializer.show(user)).to eq(expected)
     end
   end
 

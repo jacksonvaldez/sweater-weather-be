@@ -6,7 +6,7 @@ class Api::V1::UsersController < ApplicationController
 
     user.save!
 
-    render json: UserSerializer.show(user, user.api_key), status: 201
+    render json: UserSerializer.show(user), status: 201
   end
 
   private
