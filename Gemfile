@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '2.7.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6', '>= 5.2.6.2'
@@ -48,6 +48,7 @@ end
 
 group :test do
   gem 'webmock'
+  gem 'vcr'
   gem 'simplecov'
   gem 'shoulda-matchers', '~> 5.0'
 end
