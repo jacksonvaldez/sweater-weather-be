@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Which bundler?
+          name: 2.1.4
           command: bundle install
       #     command: bundle -v
       # - ruby/bundle-install
